@@ -2,11 +2,13 @@ import { useState } from "react";
 import games from "../data/games";
 import GameCard from "../Components/GameCard";
 
+
 const categories = ["All", "Action", "Adventure", "Sports", "Racing"];
 
 const GameSection = () => {
     const [filter, setFilter] = useState("All");
     const [selectedGame, setSelectedGame] = useState(null);
+    const [btnHover, setBtnHover] = useState(false);
 
     const filteredGames = filter === "All" ? games : games.filter(game => game.category === filter);
 
@@ -38,9 +40,16 @@ const GameSection = () => {
                         <div className="bg-[#1b2141] text-white rounded-lg p-6 w-[90%] max-w-md relative shadow-xl border border-cyan-400">
                             <button
                                 onClick={() => setSelectedGame(null)}
+                                onMouseEnter={() => setBtnHover(true)}
+                                onMouseLeave={() => setBtnHover(false)}
+                                style={{
+                                    backgroundColor: btnHover ? '#1aeeef' : 'transparent',
+                                    color: btnHover ? '#050e2d' : '#fff',
+                                    border: '1px solid #1aeeef',
+                                }}
                                 className="absolute top-2 right-2 text-white text-xl"
                             >
-                                &times;
+                               X
                             </button>
                             <h2 className="text-2xl font-bold mb-3">{selectedGame.title}</h2>
                             <p className="mb-4">{selectedGame.description || "No description available."}</p>

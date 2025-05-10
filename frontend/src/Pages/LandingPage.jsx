@@ -5,16 +5,36 @@ import GameSection from './GameSection'
 import Tournaments from './Tournaments'
 import Contact from './Contact'
 import Footer from '../Components/Footer'
+import Pricing from './Pricing'
 
 const LandingPage = () => {
   return (
     <div>
-        <Home/>
-        <About/>
-        <GameSection/>
-        <Tournaments/>
-        <Contact/>
-        <Footer/>
+      <section id="home">
+        <Home />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="games">
+        <GameSection />
+      </section>
+
+      <section id="tournaments">
+        <Tournaments />
+      </section>
+
+      <section id="pricing">
+        <Pricing />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+
+      <Footer />
     </div>
   )
 }

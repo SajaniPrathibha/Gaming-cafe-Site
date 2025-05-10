@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 
 const GameCard = ({ title, category, image, onInfoClick }) => {
+    const [btnHover, setBtnHover] = useState(false);
     return (
         <Tilt
             glareEnable={true}
@@ -21,8 +22,16 @@ const GameCard = ({ title, category, image, onInfoClick }) => {
                 <div className="border-t-2 border-[#35407e] pt-2 flex justify-between items-center">
                     <p className="text-white text-sm">{category}</p>
                     <button
+                        type="button"
                         onClick={onInfoClick}
-                        className="text-sm font-bold border border-[#1aeeef] text-white px-3 py-1 rounded hover:bg-[#1aeeef] hover:text-[#050e2d] shadow hover:shadow-cyan-500"
+                        onMouseEnter={() => setBtnHover(true)}
+                        onMouseLeave={() => setBtnHover(false)}
+                        style={{
+                            backgroundColor: btnHover ? '#1aeeef' : 'transparent',
+                            color: btnHover ? '#050e2d' : '#fff',
+                            border: '1px solid #1aeeef',
+                        }}
+                        className="text-sm font-bold  px-3 py-1 rounded transition-all duration-200"
                     >
                         Info
                     </button>

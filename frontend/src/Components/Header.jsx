@@ -27,18 +27,22 @@ const Header = () => {
                 className={`${menuOpen ? "block" : "hidden"
                     } absolute top-16 right-6 bg-white shadow-lg p-4 rounded-lg md:flex md:static md:bg-transparent md:shadow-none md:p-0 md:space-x-6`}
             >
-                <a href="#" className="block md:inline-block text-white hover:underline py-2">
+                <a href="#home" className="block md:inline-block text-white hover:underline py-2" onClick={() => setMenuOpen(false)}>
                     Home
                 </a>
-                <a href="#" className="block md:inline-block text-white hover:underline py-2">
-                    Listings
+                <a href="#about" className="block md:inline-block text-white hover:underline py-2" onClick={() => setMenuOpen(false)}>
+                    About
                 </a>
-                <a href="#" className="block md:inline-block text-white hover:underline py-2">
-                    Our Value
+                <a href="#games" className="block md:inline-block text-white hover:underline py-2" onClick={() => setMenuOpen(false)}>
+                    Games
                 </a>
-                <a href="#" className="block md:inline-block text-white hover:underline py-2">
-                    Contact us
-                </a>
+                <a href="#tournaments" className="block md:inline-block text-white hover:underline py-2" onClick={() => setMenuOpen(false)}>
+                    Tournaments
+                </a> 
+                
+                <a href="#contact" className="block md:inline-block text-white hover:underline py-2" onClick={() => setMenuOpen(false)}>
+                   Contact us
+                </a> 
             </nav>
         </header>
     );
