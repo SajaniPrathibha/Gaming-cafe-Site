@@ -4,15 +4,15 @@ import { gsap } from "gsap";
 
 const Testimonials = [
     {
-        text: "Working with KnightOwl was an amazing experience! They delivered a great website exactly as I requested, with a sleek design and smooth functionality. The entire process was seamless, and they were highly responsive to my needs. Their professionalism and attention to detail made everything easy, and the final outcome exceeded my expectations. I highly recommend them!",
-        name: "Malin Gunarathne",
-        title: "Candles by Jazz-Website",
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error architecto adipisci laborum harum consequuntur ullam modi cupiditate, nesciunt consectetur dolor fugiat veritatis quae, impedit quod a enim sapiente, placeat provident",
+        name: "No Name",
+        title: "No title",
         image: "/img/person3.png",
     },
     {
-        text: "Innovative and responsive web apps and websites that enhance user engagement, boost online presence, and support business growth objectives.",
-        name: "John Wolfff",
-        title: "CEO, Singer",
+        text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error architecto adipisci laborum harum consequuntur ullam modi cupiditate, nesciunt consectetur dolor fugiat veritatis quae, impedit quod a enim sapiente, placeat provident",
+        name: "No Name",
+        title: "No title",
         image: "/img/person4.png",
     },
     // Add more testimonials here...
