@@ -1,5 +1,5 @@
 import React from "react";
-import contactImg from "../img/am.jpg"; // Place your image in /src/assets
+import contactImg from "../img/am.jpg"; 
 
 const Contact = () => {
     return (
