@@ -76,7 +76,12 @@ const ApplicationPage = () => {
           <form onSubmit={handleSubmit} className="space-y-4 text-white">
             <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-400" />
             <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="Age" required className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-400" />
-            <input type="text" name="tournamentType" value={formData.tournamentType} onChange={handleChange} placeholder="Tournament Type" required className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-400" />
+            <select name="category" value={formData.tournamentType} onChange={handleChange} required className="w-full p-2 rounded bg-gray-800 text-white">
+              <option value="">Select Category</option>
+              <option value="single_Elimination">Single Elimination</option>
+              <option value="double_Elimination">Double Elimination</option>
+              <option value="round_Robin">Round Robin</option>
+            </select>
 
             <select name="category" value={formData.category} onChange={handleChange} required className="w-full p-2 rounded bg-gray-800 text-white">
               <option value="">Select Category</option>
