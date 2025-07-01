@@ -75,9 +75,19 @@ const ApplicationPage = () => {
           <h2 className="text-2xl font-semibold mb-6 text-center">Tournament Registration</h2>
           <form onSubmit={handleSubmit} className="space-y-4 text-white">
             <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-400" />
-            <input type="number" name="age" value={formData.age} onChange={handleChange} placeholder="Age" required className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-400" />
-            <select name="category" value={formData.tournamentType} onChange={handleChange} required className="w-full p-2 rounded bg-gray-800 text-white">
-              <option value="">Select Category</option>
+            <input
+              type="number"
+              name="age"
+              value={formData.age}
+              onChange={handleChange}
+              placeholder="Age"
+              required
+              min="1"
+              max="99"
+              className="w-full p-2 rounded bg-gray-800 text-white placeholder-gray-400"
+            />
+            <select name="tournamentType" value={formData.tournamentType} onChange={handleChange} required className="w-full p-2 rounded bg-gray-800 text-white">
+              <option value="">TournamentType</option>
               <option value="single_Elimination">Single Elimination</option>
               <option value="double_Elimination">Double Elimination</option>
               <option value="round_Robin">Round Robin</option>
