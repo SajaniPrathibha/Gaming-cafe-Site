@@ -51,7 +51,7 @@ const Pricing = () => {
               ))}
             </ul>
             <Link
-              to="/application"
+              to="/"
               className="inline-block px-5 py-2 mt-4 border border-[#1aeeef] text-white font-bold rounded hover:bg-[#1aeeef] hover:text-[#050e2d] transition duration-300"
             >
               Get Started
